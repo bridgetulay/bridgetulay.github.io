@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4f4f4f;
+}
+
+.navbar-logo span {
+    color: #ff6a6a;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: center; /* Center the links */
+    flex-grow: 1; /* Allow the links to occupy center space */
+    gap: 20px;
+    position: absolute; /* Center the links relative to the navbar */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: #4f4f4f;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #ff6a6a;
+}
+
+/* Landing Page */
+.landing-page {
+    background-color: #f5f2ef;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    align-items: center;
+    height: 100vh;
+    padding: 5%;
+    gap: 5%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.content h1 {
+    font-size: clamp(2.5rem, 5vw, 6rem); /* Dynamic font size scaling */
+    color: #353737;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.content h2 {
+    font-size: clamp(1.2rem, 2.5vw, 3rem); /* Dynamic font size scaling */
+    color: #353737;
+    white-space: pre-line;
+    margin-bottom: 20px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: clamp(500px, 25vw, 600px); /* Dynamic image size scaling */
+    height: auto;
+    
+   
+}
+
+/* About Section */
+.about-page {
+    background-color: #6b6e74;
+    padding: 5%;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-page h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.about-page p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* About Section */
+.contact-page {
+    background-color: #F7DC6F;
+    padding: 5%;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-page h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.contact-page p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* Responsive Design */
+@media (min-width: 1440px) {
+    .landing-page {
+        grid-template-columns: 1fr 1fr; /* Keep two columns for larger screens */
+        gap: 8%; /* Increase spacing between text and image */
+    }
+
+    .content h1 {
+        font-size: clamp(3rem, 6vw, 7rem); /* Larger font size for large screens */
+    }
+
+    .content h2 {
+        font-size: clamp(1.5rem, 3vw, 4rem); /* Larger subheading font size */
+    }
+
+    .image img {
+        width: clamp(500px, 40vw, 700px); /* Larger image size for big screens */
+    }
+}
+
+@media (max-width: 1024px) {
+    .landing-page {
+        grid-template-columns: 1fr; /* Stack content and image */
+        text-align: center;
+    }
+
+    .content {
+        align-items: center;
+    }
+
+    .content h1 {
+        font-size: clamp(2rem, 4vw, 5rem); /* Adjust font size for medium screens */
+    }
+
+    .content h2 {
+        font-size: clamp(1rem, 2vw, 2.5rem); /* Adjust font size for medium screens */
+    }
+
+    .image img {
+        width: clamp(500px, 30vw, 600px); /* Adjust image size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 5%;
+    }
+
+    .landing-page {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .content h1 {
+        font-size: clamp(1.8rem, 5vw, 4rem); /* Smaller font size for small screens */
+    }
+
+    .content h2 {
+        font-size: clamp(0.9rem, 2vw, 2rem); /* Smaller font size for small screens */
+    }
+
+    .image img {
+        width: clamp(150px, 40vw, 300px); /* Smaller image size for small screens */
+    }
+}
