@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (index < typewriterText.length) {
             typewriterElement.innerHTML += typewriterText[index];
             index++;
-            setTimeout(typeEffect, 100); // Continue typing
+            setTimeout(typeEffect, 70); // Continue typing
         } else {
             // Pause before clearing and restarting the animation
             setTimeout(() => {
                 typewriterElement.innerHTML = ""; // Clear the typewriter text
                 index = 0; // Reset the index
                 typeEffect(); // Restart the typewriter effect
-            }, 1500); // Pause for 1.5 seconds before restarting
+            }, 1300); // Pause for 1.5 seconds before restarting
         }
     }
 
