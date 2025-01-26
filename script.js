@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const staticText = "I'm Brigitte Estolatan"; // Static text
     const typewriterText = "An Information Technology Student"; // Typewriter text
     const staticElement = document.getElementById('static-text');
@@ -24,4 +24,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     typeEffect(); // Start the typewriter effect
+});
+
+
+let lastScrollY = window.scrollY; // Keep track of the last scroll position
+
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar'); // Select the navbar
+    if (window.scrollY < lastScrollY) {
+        // User is scrolling up
+        navbar.classList.remove('hidden');
+    } else {
+        // User is scrolling down
+        navbar.classList.add('hidden');
+    }
+    lastScrollY = window.scrollY; // Update the last scroll position
 });
