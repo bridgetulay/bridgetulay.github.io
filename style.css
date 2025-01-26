@@ -8,6 +8,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     overflow-x: hidden;
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -64,13 +67,13 @@ body {
     text-decoration: none;
     color: #4f4f4f;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 700;
     transition: color 0.3s ease;
     letter-spacing: 0.3em;
 }
 
 .navbar-links a:hover {
-    color: #ff6a6a;
+    color: #F7DC6F;
 }
 
 
@@ -85,6 +88,7 @@ body {
     height: 100vh;
     padding: 5% 9%;
     gap: 1%;
+    position: relative;
 }
 
 .content {
@@ -92,22 +96,23 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    
 }
 
 .content h1 {
     font-size: clamp(2.5rem, 5vw, 6rem);
-    /* Dynamic font size scaling */
     color: #353737;
     margin-bottom: 10px;
     line-height: 1.2;
+    letter-spacing: 0.12em;
 }
 
 .content h2 {
     font-size: clamp(1.2rem, 2.5vw, 5rem);
-    /* Dynamic font size scaling */
     color: #353737;
     white-space: pre-line;
     margin-bottom: 20px;
+   
 }
 
 #typewriter {
@@ -123,44 +128,43 @@ body {
 
 .image img {
     width: clamp(500px, 25vw, 600px);
-    /* Dynamic image size scaling */
     height: auto;
     margin: 0 auto;
-    /* Ensure the image stays centered */
     display: block;
 }
-
-.resume button {
+.resume-container {
+    margin-top: -300px; /* Add spacing below the text */
     display: flex;
+    justify-content: flex-start; /* Align to the left */
+}
+
+.resume {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     padding: 12px 24px;
-    margin-top: -200px;
     font-size: 1rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     color: white;
     background-color: #6b6e74;
+    text-decoration: none; /* Remove underline */
     border: none;
-    border-radius: 50px;
-    /* Rounded edges */
+    border-radius: 50px; /* Rounded edges */
     cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-
-.resume button img {
-    width: 24px;
-    /* Icon size */
+.resume img {
+    width: 24px; /* Icon size */
     height: 24px;
 }
 
-.resume button:hover {
+.resume:hover {
     background-color: #F7DC6F;
-    color: black;
-    /* Slightly lighter background on hover */
+    color: black; /* Change text color on hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-    /* Increased shadow on hover */
 }
 
 
@@ -183,9 +187,11 @@ body {
 }
 
 .about-page p {
-    font-size: 1.5rem;
-    max-width: 600px;
+    font-size: 1rem;
+    max-width: 900px;
     margin: 0 auto;
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
 }
 
 
@@ -216,44 +222,56 @@ body {
 
 /* Responsive Design */
 
-
-/* Monitor Screens (Large Screens, e.g., 1440px and above) */
-
+/* Larger Screens*/
 @media (min-width: 1440px) {
     .landing-page {
         grid-template-columns: 1fr 1fr;
-        gap: 8%;
+        gap: 8%; /* Maintain a comfortable spacing */
     }
+
     .content h1 {
-        font-size: clamp(3rem, 6vw, 7rem);
+        font-size: clamp(3.5rem, 6vw, 6rem); /* Larger heading for bigger screens */
     }
+
     .content h2 {
-        font-size: clamp(1.5rem, 3vw, 4rem);
+        font-size: clamp(2rem, 4vw, 3rem); /* Larger subheading */
     }
+
     .image img {
-        width: clamp(800px, 40vw, 700px);
+        width: clamp(600px, 45vw, 800px); /* Maximum size for large screens */
+        height: auto;
+    }
+    .resume-container {
+        margin-top: -600px; /* Increase margin for larger screens */
+    }
+    .about-page{
+        height: min-content;
+       
     }
 }
-
-
-/* 15.6-inch Laptop Screens (1080px to 1439px) */
-
+/* Laptop Screens (1080px to 1439px) */
 @media (min-width: 1080px) and (max-width: 1439px) {
     .landing-page {
         grid-template-columns: 1fr 1fr;
-        gap: 5%;
+        gap: 5%; 
     }
+
     .content h1 {
-        font-size: clamp(2.5rem, 5vw, 6rem);
+        font-size: clamp(3rem, 5vw, 6rem); 
     }
+
     .content h2 {
-        font-size: clamp(1.2rem, 2.5vw, 3rem);
+        font-size: clamp(1.5rem, 3vw, 3rem); 
     }
+
     .image img {
-        width: clamp(600px, 35vw, 600px);
+        width: clamp(500px, 40vw, 700px); 
+        height: auto;
+    }
+    .resume-container {
+        margin-top: -300px; 
     }
 }
-
 
 /* 14-inch Laptop Screens (1025px to 1079px) */
 
@@ -273,7 +291,10 @@ body {
         font-size: clamp(1rem, 2vw, 2.5rem);
     }
     .image img {
-        width: clamp(350px, 40vw, 550px);
+        width: clamp(400px, 40vw, 600px);
+    }
+    .resume-container {
+        margin-top: -300px; /* Increase margin for larger screens */
     }
 }
 
@@ -294,7 +315,7 @@ body {
         font-size: clamp(1rem, 2vw, 2rem);
     }
     .image img {
-        width: clamp(300px, 50vw, 450px);
+        width: clamp(300px, 50vw, 500px);
     }
 }
 
@@ -318,6 +339,6 @@ body {
         font-size: clamp(0.8rem, 2vw, 1.8rem);
     }
     .image img {
-        width: clamp(150px, 60vw, 300px);
+        width: clamp(200px, 60vw, 400px);
     }
 }

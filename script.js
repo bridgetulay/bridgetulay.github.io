@@ -40,3 +40,4 @@ window.addEventListener('scroll', () => {
     }
     lastScrollY = window.scrollY; // Update the last scroll position
 });
+
