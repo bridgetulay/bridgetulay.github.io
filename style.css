@@ -40,10 +40,10 @@ body {
     /* Move navbar out of view when hidden */
 }
 
-.navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #4f4f4f;
+.navbar-logo img {
+    height: 40px;   /* adjust as needed */
+    width: auto;    /* keeps aspect ratio */
+    display: block; /* removes bottom spacing */
 }
 
 .navbar-logo span {
@@ -204,18 +204,26 @@ body {
 }
 .about-page .tools {
     display: flex;
-    flex-wrap: wrap; /* Allow icons to wrap to the next row */
-    gap: 20px; /* Add spacing between icons */
-    justify-content: center; /* Center align icons */
-    margin-top: 10px; /* Add space between the paragraph and icons */
+    flex-wrap: nowrap;   /* Prevent wrapping */
+    gap: 20px;           /* Space between icons */
+    justify-content: center; /* Keep them centered */
+    margin-top: 10px;
+    overflow-x: auto;    /* Allow horizontal scroll if icons overflow */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.about-page .tools::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
 }
 
 .about-page .tools img {
-    width: 60px; /* Set a fixed width for icons */
-    height: 60px; /* Set a fixed height for icons */
-    transition: transform 0.3s ease; /* Add hover effect */
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;  /* Prevent images from shrinking */
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
+
 
 .about-page .tools img:hover {
     transform: scale(1.2); /* Enlarge icon on hover */
