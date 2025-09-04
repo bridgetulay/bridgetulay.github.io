@@ -41,11 +41,12 @@ body {
 }
 
 .navbar-logo img {
-    height: 40px;   /* fixed height */
-    width: auto;    /* keeps aspect ratio */
-    max-height: 40px; /* ensure it never goes beyond this */
-    object-fit: contain;
-    display: block;
+    height: 40px;         /* force a consistent height */
+    width: auto;          /* maintain aspect ratio */
+    display: block;       /* remove inline spacing */
+    line-height: 0;       /* remove font-based spacing */
+    vertical-align: middle; /* keep alignment stable */
+    image-rendering: auto; /* let browser handle scaling cleanly */
 }
 
 
