@@ -227,23 +227,70 @@ body {
 .projects-page {
     background-color: #F7DC6F;
     padding: 5%;
-    color: #ffffff;
-    height: 100vh;
+    color: #353737;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     text-align: center;
 }
 
 .projects-page h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    color: #353737;
 }
 
-.projects-page p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin: 0 auto;
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    width: 100%;
+    max-width: 1400px;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: left;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: #3a3a3a;
+    padding: 6px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -386,6 +433,9 @@ body {
     .about-page p{
         margin: 0 auto;
         margin-bottom: 30px;
+    }
+    .projects-container {
+        grid-template-columns: 1fr;
     }
 
 }

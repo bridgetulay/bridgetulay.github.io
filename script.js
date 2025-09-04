@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const staticText = "I'm Brigitte Estolatan"; // Static text
-    const typewriterText = "An Information Technology Student"; // Typewriter text
+    const typewriterText = "An Information Technology Graduate"; // Typewriter text
     const staticElement = document.getElementById('static-text');
     const typewriterElement = document.getElementById('typewriter');
     let index = 0;
