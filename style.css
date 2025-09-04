@@ -41,10 +41,13 @@ body {
 }
 
 .navbar-logo img {
-    height: 40px;   /* adjust as needed */
+    height: 40px;   /* fixed height */
     width: auto;    /* keeps aspect ratio */
-    display: block; /* removes bottom spacing */
+    max-height: 40px; /* ensure it never goes beyond this */
+    object-fit: contain;
+    display: block;
 }
+
 
 .navbar-logo span {
     color: #ff6a6a;
