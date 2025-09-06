@@ -25,21 +25,32 @@
         </div>
     </nav>
 
-    <section class="landing-page" id="landing">
+   <section class="landing-page" id="landing">
         <div class="content">
             <h1>Hi</h1>
-            <h2 id="static-text"></h2>
-            <h2 id="typewriter"></h2>
-        </div>
-        <div class="image">
-            <img src="https://cdn.glitch.global/11f3f447-6af5-4043-9803-1c96d2a4e6a3/Untitled%20design.png?v=1737836747566" alt="Landing Page Image">
-        </div>
-        <div class="resume-container">
+
+            <!-- Group text together -->
+            <div class="text-block">
+                <h2 id="static-text"></h2>
+                <h2 id="typewriter"></h2>
+            </div>
+
+            <!-- Resume button will now be below both h2 -->
+            <div class="resume-container">
             <a href="assets/ESTOLATAN_RESUME.pdf" download="ESTOLATAN_RESUME.pdf" class="resume">
                 <img src="assets/icon.png" alt="Icon"> Download Resume
             </a>
+            </div>
+        </div>
+
+        <div class="image">
+            <img
+            src="https://cdn.glitch.global/11f3f447-6af5-4043-9803-1c96d2a4e6a3/Untitled%20design.png?v=1737836747566"
+            alt="Landing Page Image"
+            />
         </div>
     </section>
+
 
     <section class="about-page" id="about">
         <div class="content">
@@ -73,9 +84,9 @@
             <div class="projects-container">
 
                 <!-- Card 1 -->
-                <div class="project-card">
-                    <img src="assets/VitalSkin.png" alt="VitalSkin ">
-                    <h2>VitalSkin</h2>
+                <div class="project-card" onclick="openModal('VitalSkin')">
+                    <img src="assets/VitalSkin/VitalSkin1.png" alt="VitalSkin ">
+                    <h3>VitalSkin</h3>
                     <p>An e-commerce website that provides skincare services and treatments. It includes an integrated appointment booking system to manage bookings and maintain client records.</p>
                     <div class="tags">
                         <span>HTML</span>
@@ -86,10 +97,22 @@
                     </div>
                 </div>
 
+                <div id="modal-VitalSkin" class="modal">
+                    <span class="close" onclick="closeModal('VitalSkin')">&times;</span>
+
+                    <div class="modal-content">
+                        <span class="prev" onclick="prevImage('VitalSkin')">&#10094;</span>
+                        <img class="gallery-image" id="VitalSkin-img" src="assets/VitalSkin/VitalSkin1.png" alt="VitalSkin">
+                        <span class="next" onclick="nextImage('VitalSkin')">&#10095;</span>
+                    </div>
+                </div>
+
+
+
                 <!-- Card 2 -->
-                <div class="project-card">
-                    <img src="assets/GrillBox.png" alt="GrillBox">
-                    <h2>GrillBox</h2>
+                <div class="project-card" onclick="openModal('GrillBox')">
+                    <img src="assets/GrillBox/GrillBox1.png" alt="GrillBox">
+                    <h3>GrillBox</h3>
                     <p>A web-based food ordering platform that provides a variety of meals from different categories that features a streamlined ordering process </p>
                     <div class="tags">
                         <span>HTML</span>
@@ -100,10 +123,21 @@
                     </div>
                 </div>
 
+
+                <div id="modal-GrillBox" class="modal">
+                    <span class="close" onclick="closeModal('GrillBox')">&times;</span>
+
+                    <div class="modal-content">
+                        <span class="prev" onclick="prevImage('GrillBox')">&#10094;</span>
+                        <img class="gallery-image" id="GrillBox-img" src="assets/GrillBox/GrillBox1.png" alt="GrillBox">
+                        <span class="next" onclick="nextImage('GrillBox')">&#10095;</span>
+                    </div>
+                </div>
+
                 <!-- Card 3 -->
                 <div class="project-card">
-                    <img src="assets/RECO-System.png" alt="RECO-System">
-                    <h2>RECO-System</h2>
+                    <img src="assets/RecoSystem/RecoSystem.png" alt="RECO-System">
+                    <h3>RECO-System</h3>
                     <p>A mobile application that uses image recognition and segmentation that provide ways to upcycling recyclable materials.</p>
                     <div class="tags">
                         <span>Dart</span>
@@ -115,9 +149,9 @@
                 </div>
 
                 <!-- Card 4 -->
-                <div class="project-card">
-                    <img src="assets/Scan-tastic-Eats.png" alt="Scan-tastic-Eats">
-                    <h2>Scan-tastic-Eats</h2>
+                <div class="project-card" onclick="openModal('Scantastic')">
+                    <img src="assets/Scantastic/Scan-tastic-Eats.png" alt="Scan-tastic-Eats">
+                    <h3>Scan-tastic-Eats</h3>
                     <p>A mobile app that uses image recognition to provide detailed step-by-step recipe recommendation. </p>
                     <div class="tags">
                     <span>Flutter</span>
@@ -128,9 +162,9 @@
                 </div>
 
                 <!-- Card 5-->
-                <div class="project-card">
-                    <img src="assets/HealthQuest.png" alt="HealthQuest">
-                    <h2>HealthQuest</h2>
+                <div class="project-card" onclick="openModal('HealthQuest')">
+                    <img src="assets/HealthQuest/HealthQuest.png" alt="HealthQuest">
+                    <h3>HealthQuest</h3>
                     <p>A gamified mobile app for health tracking in improving health goals by daily challenges, personalized food and providing community module. </p>
                     <div class="tags">
                     <span>React Native</span>
@@ -139,8 +173,8 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="assets/KASAMA.png" alt="KASAMA">
-                    <h2>KASAMA</h2>
+                    <img src="assets/Kasama/KASAMA.png" alt="KASAMA">
+                    <h3>KASAMA</h3>
                     <p>A user interface design for ride-sharing mobile application. The interface simplifies the process of connecting students from the same hometown for shared commutes. </p>
                     <div class="tags">
                     <span>Figma</span>
@@ -148,9 +182,9 @@
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <img src="assets/iSeeker.png" alt="iSeeker">
-                    <h2>iSeeker</h2>
+                <div class="project-card" onclick="openModal('iSeeker')">
+                    <img src="assets/iSeeker/iSeeker.png" alt="iSeeker">
+                    <h3>iSeeker</h3>
                     <p>A user interface design for agricultural application that uses image recognition technology to provide farmers with the instant identification of invasive plants and crop pests.</p>
                     <div class="tags">
                     <span>Figma</span>
@@ -159,8 +193,8 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="assets/Dispatch.png" alt="Dispatch">
-                    <h2>Dispatch</h2>
+                    <img src="assets/Dispatch/Dispatch.png" alt="Dispatch">
+                    <h3>Dispatch</h3>
                     <p>A user interface design for a mobile emergency respose application.</p>
                     <div class="tags">
                     <span>Figma</span>
@@ -169,8 +203,8 @@
                 </div>
 
                 <div class="project-card">
-                    <img src="assets/Cup n TasTeas.png" alt="Cup n TasTeas">
-                    <h2>Cup n TasTeas</h2>
+                    <img src="assets/CNT/CNT.png" alt="Cup n TasTeas">
+                    <h3>Cup n TasTeas</h3>
                     <p>A java-based e-commerce system that provides automated order and payment processing.</p>
                     <div class="tags">
                     <span>Java</span>

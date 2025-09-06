@@ -41,3 +41,66 @@ window.addEventListener('scroll', () => {
     lastScrollY = window.scrollY; // Update the last scroll position
 });
 
+
+// Project images
+const projectImages = {
+  "VitalSkin": [
+    "assets/VitalSkin/VitalSkin1.png",
+    "assets/VitalSkin/VitalSkin2.png",
+    "assets/VitalSkin/VitalSkin3.png",
+    "assets/VitalSkin/VitalSkin4.png",
+    "assets/VitalSkin/VitalSkin5.png",
+    "assets/VitalSkin/VitalSkin6.png",
+    "assets/VitalSkin/VitalSkin7.png",
+    "assets/VitalSkin/VitalSkin8.png",
+    "assets/VitalSkin/VitalSkin9.png",
+    "assets/VitalSkin/VitalSkin10.png"
+    ],
+
+    "GrillBox": [
+    "assets/GrillBox/GrillBox1.png",
+    "assets/GrillBox/GrillBox2.png",
+    "assets/GrillBox/GrillBox3.png",
+    "assets/GrillBox/GrillBox4.png",
+    "assets/GrillBox/GrillBox5.png",
+    "assets/GrillBox/GrillBox6.png",
+    "assets/GrillBox/GrillBox7.png",
+    "assets/GrillBox/GrillBox8.png",
+    "assets/GrillBox/GrillBox9.png"
+    ]
+};
+
+let currentIndex = {};
+
+// Open modal
+function openModal(project) {
+  currentIndex[project] = 0;
+  document.getElementById("modal-" + project).style.display = "flex";
+  updateImage(project);
+}
+
+// Close modal
+function closeModal(project) {
+  document.getElementById("modal-" + project).style.display = "none";
+}
+
+// Next
+function nextImage(project) {
+  currentIndex[project] = (currentIndex[project] + 1) % projectImages[project].length;
+  updateImage(project);
+}
+
+// Prev
+function prevImage(project) {
+  currentIndex[project] =
+    (currentIndex[project] - 1 + projectImages[project].length) % projectImages[project].length;
+  updateImage(project);
+}
+
+// Update modal image
+function updateImage(project) {
+  document.getElementById(project + "-img").src = projectImages[project][currentIndex[project]];
+}
+
+
+
