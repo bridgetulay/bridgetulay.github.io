@@ -55,9 +55,9 @@ const projectImages = {
     "assets/VitalSkin/VitalSkin8.png",
     "assets/VitalSkin/VitalSkin9.png",
     "assets/VitalSkin/VitalSkin10.png"
-    ],
+  ],
 
-    "GrillBox": [
+  "GrillBox": [
     "assets/GrillBox/GrillBox1.png",
     "assets/GrillBox/GrillBox2.png",
     "assets/GrillBox/GrillBox3.png",
@@ -67,7 +67,68 @@ const projectImages = {
     "assets/GrillBox/GrillBox7.png",
     "assets/GrillBox/GrillBox8.png",
     "assets/GrillBox/GrillBox9.png"
-    ]
+  ],
+
+  "Scantastic": [
+    "assets/Scantastic/Scantastic1.png",
+    "assets/Scantastic/Scantastic2.png",
+    "assets/Scantastic/Scantastic3.png",
+    "assets/Scantastic/Scantastic4.png",
+    "assets/Scantastic/Scantastic5.png",
+    "assets/Scantastic/Scantastic6.png",
+    "assets/Scantastic/Scantastic7.png",
+    "assets/Scantastic/Scantastic8.png",
+    "assets/Scantastic/Scantastic9.png",
+    "assets/Scantastic/Scantastic10.png",
+    "assets/Scantastic/Scantastic11.png",
+    "assets/Scantastic/Scantastic12.png",
+    "assets/Scantastic/Scantastic13.png",
+    "assets/Scantastic/Scantastic14.png",
+    "assets/Scantastic/Scantastic15.png"
+  ],
+
+  "Kasama": [
+    "assets/Kasama/Kasama1.png",
+    "assets/Kasama/Kasama2.png",
+    "assets/Kasama/Kasama3.png",
+    "assets/Kasama/Kasama4.png",
+    "assets/Kasama/Kasama5.png",
+    "assets/Kasama/Kasama6.png",
+    "assets/Kasama/Kasama7.png",
+    "assets/Kasama/Kasama8.png",
+    "assets/Kasama/Kasama9.png",
+    "assets/Kasama/Kasama10.png",
+    "assets/Kasama/Kasama11.png",
+    "assets/Kasama/Kasama12.png",
+    "assets/Kasama/Kasama13.png",
+    "assets/Kasama/Kasama14.png",
+    "assets/Kasama/Kasama15.png"
+  ],
+
+  "iSeeker":[
+    "assets/iSeeker/iSeeker1.png",
+    "assets/iSeeker/iSeeker2.png",
+    "assets/iSeeker/iSeeker3.png",
+    "assets/iSeeker/iSeeker4.png",
+    "assets/iSeeker/iSeeker5.png",
+    "assets/iSeeker/iSeeker6.png",
+    "assets/iSeeker/iSeeker7.png",
+    "assets/iSeeker/iSeeker8.png"
+  ],
+
+  "Dispatch":[
+    "assets/Dispatch/Dispatch1.png",
+    "assets/Dispatch/Dispatch2.png",
+    "assets/Dispatch/Dispatch3.png",
+    "assets/Dispatch/Dispatch4.png",
+    "assets/Dispatch/Dispatch5.png"
+  ],
+
+  "CNT":[
+    "assets/CNT/CNT1.png",
+    "assets/CNT/CNT2.png",
+    "assets/CNT/CNT3.png",
+  ],
 };
 
 let currentIndex = {};

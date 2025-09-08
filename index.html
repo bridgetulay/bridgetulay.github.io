@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="assets/logo1.ico?v=3">
-    <script src="script.js?v=3" defer></script>
+    <link rel="icon" type="image/x-icon" href="assets/logo1.ico?v=4">
+    <script src="script.js?v=4" defer></script>
 </head>
 
 <body>
@@ -135,7 +135,7 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('RecoSystem')">
                     <img src="assets/RecoSystem/RecoSystem.png" alt="RECO-System">
                     <h3>RECO-System</h3>
                     <p>A mobile application that uses image recognition and segmentation that provide ways to upcycling recyclable materials.</p>
@@ -161,6 +161,16 @@
                     </div>
                 </div>
 
+                <div id="modal-Scantastic" class="modal">
+                    <span class="close" onclick="closeModal('Scantastic')">&times;</span>
+
+                    <div class="modal-content">
+                        <span class="prev" onclick="prevImage('Scantastic')">&#10094;</span>
+                        <img class="gallery-image" id="Scantastic-img" src="assets/Scantastic/Scantastic1.png" alt="Scan-tastic-Eats">
+                        <span class="next" onclick="nextImage('Scantastic')">&#10095;</span>
+                    </div>
+                </div>
+
                 <!-- Card 5-->
                 <div class="project-card" onclick="openModal('HealthQuest')">
                     <img src="assets/HealthQuest/HealthQuest.png" alt="HealthQuest">
@@ -172,13 +182,23 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" onclick="openModal('Kasama')">
                     <img src="assets/Kasama/Kasama.png" alt="KASAMA">
                     <h3>KASAMA</h3>
                     <p>A user interface design for ride-sharing mobile application. The interface simplifies the process of connecting students from the same hometown for shared commutes. </p>
                     <div class="tags">
                     <span>Figma</span>
                     <span>Canva</span>
+                    </div>
+                </div>
+
+                <div id="modal-Kasama" class="modal">
+                    <span class="close" onclick="closeModal('Kasama')">&times;</span>
+
+                    <div class="modal-content">
+                        <span class="prev" onclick="prevImage('Kasama')">&#10094;</span>
+                        <img class="gallery-image" id="Kasama-img" src="assets/Kasama/Kasama1.png" alt="Kasama">
+                        <span class="next" onclick="nextImage('Kasama')">&#10095;</span>
                     </div>
                 </div>
 
@@ -192,7 +212,18 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div id="modal-iSeeker" class="modal">
+                    <span class="close" onclick="closeModal('iSeeker')">&times;</span>
+
+                    <div class="modal-content">
+                        <span class="prev" onclick="prevImage('iSeeker')">&#10094;</span>
+                        <img class="gallery-image" id="iSeeker-img" src="assets/iSeeker/iSeeker.png" alt="iSeeker">
+                        <span class="next" onclick="nextImage('iSeeker')">&#10095;</span>
+                    </div>
+                </div>
+
+
+                <div class="project-card" onclick="openModal('Dispatch')">
                     <img src="assets/Dispatch/Dispatch.png" alt="Dispatch">
                     <h3>Dispatch</h3>
                     <p>A user interface design for a mobile emergency respose application.</p>
@@ -202,13 +233,33 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div id="modal-Dispatch" class="modal">
+                    <span class="close" onclick="closeModal('Dispatch')">&times;</span>
+
+                    <div class="modal-content">
+                        <span class="prev" onclick="prevImage('Dispatch')">&#10094;</span>
+                        <img class="gallery-image" id="Dispatch-img" src="assets/Dispatch/Dispatch1.png" alt="Dispatch">
+                        <span class="next" onclick="nextImage('Dispatch')">&#10095;</span>
+                    </div>
+                </div>
+
+                <div class="project-card" onclick="openModal('CNT')">
                     <img src="assets/CNT/CNT.png" alt="Cup n TasTeas">
                     <h3>Cup n TasTeas</h3>
                     <p>A java-based e-commerce system that provides automated order and payment processing.</p>
                     <div class="tags">
                     <span>Java</span>
                     <span>JavaSwing</span>
+                    </div>
+                </div>
+
+                <div id="modal-CNT" class="modal">
+                    <span class="close" onclick="closeModal('CNT')">&times;</span>
+
+                    <div class="modal-content">
+                        <span class="prev" onclick="prevImage('CNT')">&#10094;</span>
+                        <img class="gallery-image" id="CNT-img" src="assets/CNT/CNT1.png" alt="Cup n TasTea">
+                        <span class="next" onclick="nextImage('CNT')">&#10095;</span>
                     </div>
                 </div>
 
