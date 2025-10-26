@@ -68,6 +68,26 @@ const projectImages = {
     "assets/GrillBox/GrillBox8.png",
     "assets/GrillBox/GrillBox9.png"
   ],
+  
+  "HealthQuest":[
+    "assets/HealthQuest/1.png", 
+    "assets/HealthQuest/2.png", 
+    "assets/HealthQuest/3.png", 
+    "assets/HealthQuest/4.png", 
+    "assets/HealthQuest/5.png", 
+    "assets/HealthQuest/6.png",
+    "assets/HealthQuest/7.png", 
+    "assets/HealthQuest/8.png", 
+    "assets/HealthQuest/9.png", 
+    "assets/HealthQuest/10.png", 
+    "assets/HealthQuest/11.png", 
+    "assets/HealthQuest/12.png", 
+    "assets/HealthQuest/13.png", 
+    "assets/HealthQuest/14.png", 
+    "assets/HealthQuest/15.png", 
+    "assets/HealthQuest/16.png", 
+    "assets/HealthQuest/17.png",
+  ],
 
   "Scantastic": [
     "assets/Scantastic/Scantastic1.png",
